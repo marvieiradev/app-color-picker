@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Color Picker</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="img-section">
+        <img src="bg.jpg" id="image" />
+      </div>
+      <div class="btns-container">
+        <input type="file" id="file" accesskey="image/*" />
+        <label for="file">Escolha uma Imagem</label>
+        <button id="pick-btn">Selecionar Cor</button>
+      </div>
+      <div id="result" class="hide">
+        <div>
+          <input type="text" id="hex-input" readonly />
+          <button onclick="copyToClipboard('hex-input')">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+
+        <div>
+          <input type="text" id="rgb-input" readonly />
+          <button onclick="copyToClipboard('rgb-input')">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+        <div id="picked-color"></div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/8e4a25e86e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
