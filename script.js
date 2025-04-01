@@ -20,11 +20,11 @@ const initEyeDropper = () => {
         rgbInput.value = rgbValue;
         pickedColor.style.backgroundColor = hexValue;
       } catch (error) {
-        alert("Erro: " + error);
+        alert("Erro: EyeDropper não é suportado");
       }
     });
   } else {
-    alert("EyeDropper não é suportado");
+    alert("Erro: EyeDropper não é suportado");
   }
 };
 
